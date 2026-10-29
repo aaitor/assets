@@ -123,3 +123,14 @@ node banner-kit/make-banner.mjs --style diagonal-drift \
 ```
 
 The profile README references the banner through a commit-pinned raw URL. After publishing a revised banner, update that URL to its new commit to display the revision.
+
+## Reproduce the LinkedIn skill banner
+
+```bash
+node banner-kit/make-banner.mjs --style diagonal-drift \
+  --repo "Publish to LinkedIn" \
+  --tagline "Draft, preview, and publish with your AI agent." \
+  --handle "@aaitor" --seed 7 --out banners/skill-publish-to-linkedin.svg
+```
+
+Its 1280 × 640 social card centers the same 1280 × 320 SVG on the style's background. The skill repository documents that wrapping/export step and records the source revision.
