@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+<title id="title">Shared Assets</title><desc id="desc">A consistent identity for the things we build. — by Aitor Argomaniz</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#233149"/></pattern></defs>
+<rect width="1280" height="640" rx="20" fill="#101827"/>
+<rect width="1280" height="640" rx="20" fill="url(#grid)" opacity=".45"/>
+<g transform="translate(0 110)" font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="64" y="58" width="36" height="36" rx="10" fill="#89E5CC"/>
+<path d="M 73 82 L 82 68 L 91 82 M 77 78 H 87" fill="none" stroke="#101827" stroke-width="2.5"/>
+<text x="116" y="82" font-size="15" letter-spacing="2.4" fill="#9CAEC4">AAITOR / OPEN SOURCE</text>
+<text x="64" y="191" font-size="51" font-weight="700" letter-spacing="-1.5" fill="#F4F7FB">Shared Assets</text>
+<text x="66" y="242" font-size="22" fill="#89E5CC">A consistent identity for the things we build.</text>
+<path d="M 64 319 H 1216" stroke="#2B3B51"/>
+<text x="66" y="360" font-size="16" fill="#9CAEC4">Built by Aitor Argomaniz</text>
+<text x="1216" y="360" text-anchor="end" font-size="14" fill="#9CAEC4" font-family="DejaVu Sans Mono, monospace">github.com/aaitor</text>
+<g transform="translate(1030 90)"><rect width="154" height="154" rx="30" fill="#17263B" stroke="#37516A"/>
+<path d="M 61 52 L 36 77 L 61 102 M 93 52 L 118 77 L 93 102 M 86 42 L 68 112" fill="none" stroke="#89E5CC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="143" cy="12" r="12" fill="#89E5CC"/></g></g></svg>

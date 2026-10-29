@@ -1,0 +1,23 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python helper artifacts
+__pycache__/
+*.py[cod]
+.venv/
+
+# Common build outputs
+node_modules/
+dist/
+build/
+coverage/
