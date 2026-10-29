@@ -145,3 +145,14 @@ node banner-kit/make-banner.mjs --style diagonal-drift \
 ```
 
 The matching social card centers the banner on a 1280 × 640 canvas with the style's background. Generation and export instructions are recorded in the skill repository's branding guide.
+
+## Reproduce the DevRel Video Studio banner
+
+```bash
+node banner-kit/make-banner.mjs --style diagonal-drift \
+  --repo "DevRel Video Studio" \
+  --tagline "From product workflow to polished demo." \
+  --handle "@aaitor" --seed 7 --out banners/devrel-video-studio.svg
+```
+
+The matching social card centers the banner on a 1280 × 640 canvas with the style's background. The studio's branding guide records the wrapping and export steps.
