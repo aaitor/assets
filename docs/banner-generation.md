@@ -167,3 +167,14 @@ node banner-kit/make-banner.mjs --style diagonal-drift \
 ```
 
 The matching social card centers the same banner on a 1280 × 640 canvas. The skill repository documents the wrapping and PNG export steps.
+
+## Reproduce the renamed Video Studio Skill banner
+
+```bash
+node banner-kit/make-banner.mjs --style diagonal-drift \
+  --repo "Video Studio Skill" \
+  --tagline "From product workflow to polished demo." \
+  --handle "@aaitor" --seed 7 --out banners/skill-video-studio.svg
+```
+
+This is the current artwork for `aaitor/skill-video-studio`. Its social card centers the banner on a 1280 × 640 canvas. Older `devrel-video-studio` asset paths remain available for pinned consumers.
