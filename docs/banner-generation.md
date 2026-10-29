@@ -156,3 +156,14 @@ node banner-kit/make-banner.mjs --style diagonal-drift \
 ```
 
 The matching social card centers the banner on a 1280 × 640 canvas with the style's background. The studio's branding guide records the wrapping and export steps.
+
+## Reproduce the GitHub Projects skill banner
+
+```bash
+node banner-kit/make-banner.mjs --style diagonal-drift \
+  --repo "GitHub Projects" \
+  --tagline "Turn your backlog into coordinated agent work." \
+  --handle "@aaitor" --seed 7 --out banners/skill-github-projects.svg
+```
+
+The matching social card centers the same banner on a 1280 × 640 canvas. The skill repository documents the wrapping and PNG export steps.
