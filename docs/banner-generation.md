@@ -110,3 +110,16 @@ Use a boolean `false` for `animate` in JavaScript; use the string flag `--animat
 5. Use an image with meaningful alt text at the top of the target README. A banner SVG does not configure the separate GitHub social preview.
 
 The default `diagonal-drift` and an `orbit-arcs` example were visually checked in Chromium during integration. CI exercises all styles in animated/static forms, fixed-seed reproducibility, text escaping, CLI output, and SVG parsing. See [font and provenance notices](../banner-kit/NOTICE.md).
+
+## Reproduce the personal profile banner
+
+The profile at [github.com/aaitor](https://github.com/aaitor) uses `banners/aaitor.svg`, generated with:
+
+```bash
+node banner-kit/make-banner.mjs --style diagonal-drift \
+  --repo "Aitor Argomaniz" \
+  --tagline "CTO & founder. Building software with AI agents." \
+  --handle "@aaitor" --seed 7 --out banners/aaitor.svg
+```
+
+The profile README references the banner through a commit-pinned raw URL. After publishing a revised banner, update that URL to its new commit to display the revision.
