@@ -1,14 +1,15 @@
-<p align="center"><img src="banners/assets.svg" alt="Shared Assets — a consistent identity for the things we build" width="100%"></p>
+<p align="center"><img src="banners/default.svg" alt="Shared Assets — a consistent identity for the things we build" width="100%"></p>
 
 # Shared Assets
 
-Reusable visual components for [Aitor Argomaniz's open-source projects](https://github.com/aaitor): project banners, social cards, README components, and a terminal recording theme. Original assets and helper code are MIT licensed.
+Reusable visual components for [Aitor Argomaniz's open-source projects](https://github.com/aaitor): project banners, social cards, README components, and a terminal recording theme. Original assets and helper code are MIT licensed; embedded fonts keep their [OFL notices](banner-kit/NOTICE.md).
 
 ## Browse the library
 
 | Directory | Contents |
 | --- | --- |
-| [banners/](banners/) | 1280 × 420 project headers, including the OSS template banner |
+| [banners/](banners/) | Default 1280 × 320 banner (1a) and previously published project headers |
+| [banner-kit/](banner-kit/) | Seven-style Node.js banner generator and embedded fonts |
 | [social/](social/) | 1280 × 640 social-card sources and PNG exports |
 | [brand/tokens.json](brand/tokens.json) | Shared palette and font choices |
 | [components/](components/) | Copyable README header and author footer |
@@ -17,17 +18,19 @@ Reusable visual components for [Aitor Argomaniz's open-source projects](https://
 
 ## Generate a banner for a project
 
-Clone this repository, then run:
+Use Node.js 18+ with the supplied kit. **Style 1a is `diagonal-drift`**, our default:
 
 ```bash
-python3 scripts/banner.py --repo my-tool --title "My Tool" \
-  --tagline "Make everyday work a little easier."
-python3 scripts/check.py
+node banner-kit/make-banner.mjs --style diagonal-drift \
+  --repo "my-tool" --tagline "Make everyday work a little easier." \
+  --handle "@aaitor" --seed 7 --out banners/my-tool.svg
 ```
 
-This writes `banners/my-tool.svg` and `social/my-tool.svg`. Keep titles at most 32 characters and taglines at most 76. Review the artwork and commit both files. Existing files with the same repository name are replaced; review your working tree first.
+Run `node banner-kit/make-banner.mjs --list` to list all seven styles. Use `--all` to compare them, or `--animate false` for a static banner. No npm packages or network access are required.
 
-Export social SVGs to PNG with a vector editor or CairoSVG. GitHub social-preview images must be uploaded through repository Settings; linking to a file does not configure them.
+Read the **[banner generation guide](docs/banner-generation.md)** for all options, the JavaScript API, fixed-seed generation, the exact default command, and preview/publishing instructions. The [default banner](banners/default.svg) and [static alternative](banners/default-static.svg) are ready to reuse.
+
+The older `python3 scripts/banner.py` generator remains available for the original 1280 × 420 navy-and-mint headers and 1280 × 640 social cards. Existing asset URLs remain stable. Social-preview PNGs still need to be uploaded in each repository's GitHub Settings.
 
 ## Share a banner across repositories
 
@@ -52,4 +55,4 @@ See the [template's recording tutorial](https://github.com/aaitor/oss-repo-templ
 
 ## Contributing and license
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and [SECURITY.md](SECURITY.md). Original artwork, documentation, and code use [MIT](LICENSE). You can adapt the branding; do not imply endorsement. Third-party fonts/tools retain their own licenses and are not bundled here.
+See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and [SECURITY.md](SECURITY.md). Original artwork, documentation, and code use [MIT](LICENSE). You can adapt the branding; do not imply endorsement. Third-party fonts retain their own licenses; this kit embeds Instrument Serif, Geist, and Geist Mono under [SIL OFL 1.1](banner-kit/NOTICE.md).
