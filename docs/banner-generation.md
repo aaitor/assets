@@ -134,3 +134,14 @@ node banner-kit/make-banner.mjs --style diagonal-drift \
 ```
 
 Its 1280 × 640 social card centers the same 1280 × 320 SVG on the style's background. The skill repository documents that wrapping/export step and records the source revision.
+
+## Reproduce the X skill banner
+
+```bash
+node banner-kit/make-banner.mjs --style diagonal-drift \
+  --repo "Publish to X" \
+  --tagline "Draft, preview, and publish posts and threads." \
+  --handle "@aaitor" --seed 7 --out banners/skill-publish-to-x.svg
+```
+
+The matching social card centers the banner on a 1280 × 640 canvas with the style's background. Generation and export instructions are recorded in the skill repository's branding guide.
